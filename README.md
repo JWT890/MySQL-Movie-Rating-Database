@@ -10,5 +10,6 @@ The files that are the most important would be watched.csv, ratings.csv, watchli
 Then go create the following tables:  
 <img width="572" height="687" alt="image" src="https://github.com/user-attachments/assets/0c172e3c-e9e0-4a3a-8623-cba7c529f917" />  
 Then SHOW DATABAES like 'letterboxd%'; to verify.  
+There are several ways to upload csv data to a MySQL Database, either SQL Command line, using the Table Data Import Wizard but I'll do the command line.  
 
 
