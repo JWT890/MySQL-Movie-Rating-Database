@@ -11,5 +11,10 @@ Then go create the following tables:
 <img width="572" height="687" alt="image" src="https://github.com/user-attachments/assets/0c172e3c-e9e0-4a3a-8623-cba7c529f917" />  
 Then SHOW DATABAES like 'letterboxd%'; to verify.  
 There are several ways to upload csv data to a MySQL Database, either SQL Command line, using the Table Data Import Wizard but I'll do the command line.  
-*Update making a python script to import since Import Wizard doesn't want to function*
+Website to convert a csv file to a sql file: https://www.convertcsv.com/csv-to-sql.htm  
+After downloading copy the text and paste it into the MySQL Query like so:  
+<img width="714" height="499" alt="image" src="https://github.com/user-attachments/assets/1592fb0d-9ee4-4e1f-9f28-b9570076dd57" />  
+And click the lightning button to run it.  
+Then do the same for the others.  
+
 
