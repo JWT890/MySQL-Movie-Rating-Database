@@ -2,10 +2,10 @@
 
 A MySQL database project that imports movie viewing, rating, and watchlist data from Letterboxd and uses SQL queries to analyze viewing history and rating trends.
 
-Prerequisites
-MySQL
-A Letterboxd account/profile
-Letterboxd account data export
+Prerequisites  
+MySQL  
+A Letterboxd account/profile  
+Letterboxd account data export  
 
 For this project, I used my own Letterboxd profile and exported my account data.  
 
@@ -14,17 +14,39 @@ To download data from Letterboxd from your profile, go to your home page and sel
 To download your account data from Letterboxd, first go to your Letterboxd profile and select Edit Profile.  
 <img width="694" height="344" alt="image" src="https://github.com/user-attachments/assets/ad88f53c-f9e0-4b47-851e-20b11ef18712" />  
 Next, select the Data tab. Under Account Data, Letterboxd provides options to import or export your account information. Select Export Your Data.  
-The files that are the most important would be watched.csv, ratings.csv, watchlist.csv.  
-Then go create the following tables:  
+Once the export is complete, several CSV files will be available. The files used for this project are:  
+watched.csv — Movies that have been watched  
+ratings.csv — Movies that have been rated  
+watchlist.csv — Movies saved to the watchlist  
+
+# MySQL Database Creation and Tables
+
+After downloading the Letterboxd data, create the required MySQL database and tables.  
 <img width="572" height="687" alt="image" src="https://github.com/user-attachments/assets/0c172e3c-e9e0-4a3a-8623-cba7c529f917" />  
-Then SHOW DATABAES like 'letterboxd%'; to verify.  
-There are several ways to upload csv data to a MySQL Database, either SQL Command line, using the Table Data Import Wizard but I'll do the command line.  
-Website to convert a csv file to a sql file: https://www.convertcsv.com/csv-to-sql.htm  
-After downloading copy the text and paste it into the MySQL Query like so:  
+After creating the database, verify that it exists by running:  
+
+SHOW DATABASES LIKE 'letterboxd%';  
+
+This confirms that the Letterboxd database was successfully created and is available for use.  
+
+# Data import
+There are several ways to import CSV data into MySQL, including:  
+
+MySQL command line  
+MySQL Table Data Import Wizard  
+Converting the CSV data into SQL statements  
+For this project, I used the MySQL command line approach.  
+To convert the CSV files into SQL statements, I used ConvertCSV's CSV-to-SQL tool.  
+After converting a CSV file, copy the generated SQL statements and paste them into the MySQL query window.  
 <img width="714" height="499" alt="image" src="https://github.com/user-attachments/assets/1592fb0d-9ee4-4e1f-9f28-b9570076dd57" />  
-And click the lightning button to run it.  
-Then do the same for the others.  
-After putting the data in there its time to verify.  
+Run the SQL statements using the lightning bolt button in MySQL.  
+Repeat the process for the remaining CSV files:
+watched.csv  
+ratings.csv   
+watchlist.csv  
+Once the data has been imported, the database is ready for analysis.  
+
+After importing the data, SQL queries can be used to verify the dataset and generate useful reports.  
 
 # Average rating by decade
 This query analyzes movie ratings by release decade to identify movie trends across different time periods.  
